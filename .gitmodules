@@ -1,8 +1,8 @@
 [submodule "discord"]
 	path = discord
-	url = https://github.com/CrewBot-dev/crewbot-discord
+	url = git@github.com:CrewBot-dev/crewbot-discord
 	branch = main
 [submodule "server"]
 	path = server
-	url = https://github.com/CrewBot-dev/crewbot-server
+	url = git@github.com:CrewBot-dev/crewbot-server
 	branch = main
