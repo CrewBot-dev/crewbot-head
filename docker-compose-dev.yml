@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  server:
+    image: node:16
+    restart: always
+    container_name: crewbot-server
+    tty: true # this enables colorization in the log output
+    command: sh -c "cd /app && yarn --dev && yarn dev"
+    volumes:
+      - ./discord:/app:ro
+  
+  discord:
+    image: node:16
+    restart: always
+    container_name: crewbot-discord
+    tty: true # this enables colorization in the log output
+    command: sh -c "cd /app && yarn --dev && yarn dev"
+    volumes:
+      - ./server:/app:ro

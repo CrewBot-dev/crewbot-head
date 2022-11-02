@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  server:
+    restart: always
+    build:
+      context: server # this is a relative directory, the server submodule
+      dockerfile: dockerfile
+  
+  discord:
+    restart: always
+    build: 
+      context: discord # this is a relative directory, the discord submodule
+      dockerfile: dockerfile
